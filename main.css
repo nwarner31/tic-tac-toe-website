@@ -1,0 +1,24 @@
+.background {
+    width: 100vw;
+    height: 100vh;
+}
+
+.page {
+    margin: auto;
+    border: 2px solid black;
+    display: inline-block;
+    padding: 20px 15px;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-row {
+    margin-top: 10px;
+}
+
+.full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
