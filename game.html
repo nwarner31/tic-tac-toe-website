@@ -2,9 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<div class="background">
+    <div class="page game">
+        <h1 id="header" class="header"></h1>
+        <div id="gameboard">
+            <div class="game-row">
+                <div xPos="1" yPos="1" class="game-space left top"></div>
+                <div xPos="2" yPos="1" class="game-space top"></div>
+                <div xPos="3" yPos="1" class="game-space right top"></div>
+            </div>
+            <div class="game-row">
+                <div xPos="1" yPos="2" class="game-space left"></div>
+                <div xPos="2" yPos="2" class="game-space"></div>
+                <div xPos="3" yPos="2" class="game-space right"></div>
+            </div>
+            <div class="game-row">
+                <div xPos="1" yPos="3" class="game-space left bottom"></div>
+                <div xPos="2" yPos="3" class="game-space bottom"></div>
+                <div xPos="3" yPos="3" class="game-space right bottom"></div>
+            </div>
+        </div>
+        <div id="game-over-buttons"></div>
+        <div>
+            <div id="player1" class="score-display"></div>
+            <div id="ties" class="score-display"></div>
+            <div id="player2" class="score-display"></div>
 
+        </div>
+    </div>
+</div>
 </body>
+<script src="game.js"></script>
 </html>
