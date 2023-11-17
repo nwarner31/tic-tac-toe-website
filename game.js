@@ -38,7 +38,8 @@ function gameClick(event) {
     //console.log(event.target.getAttribute("xPos"));
     //console.log(event.target.getAttribute("yPos"));
     const target = event.target;
-    if (!target.getAttribute("mark")) {
+    console.log(target.tagName);
+    if (!target.getAttribute("mark") && target.tagName === "DIV") {
         target.innerHTML = `<img class="gameboard-image" src="${currentPlayer.mark}.png" />`
         target.setAttribute("mark", currentPlayer.mark);
 
@@ -62,6 +63,7 @@ function gameClick(event) {
                     generateHeader("It's a draw.");
                     endGame();
                 }, 100);
+                gameboard.removeEventListener("click", gameClick);
             } else {
                 currentPlayer = currentPlayer === player1 ? player2 : player1;
                 generateHeader(`${currentPlayer.name}'s turn`);
